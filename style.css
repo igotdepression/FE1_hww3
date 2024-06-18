@@ -1,14 +1,13 @@
-
 /* General styles */
-header{
+header {
     padding-left: 50px;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    /* margin: 0;
+    margin: 0;
     padding: 0;
-    box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 h1 {
@@ -30,6 +29,7 @@ h2 {
 .content {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .box {
@@ -38,6 +38,7 @@ h2 {
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    background-color: #fff;
 }
 
 .box img {
@@ -46,17 +47,38 @@ h2 {
     float: left;
 }
 
-p{
+p {
     text-align: justify;
     margin-right: 20px;
 }
 
-footer p{
+footer p {
     text-align: right;
-    padding-right: 40px;
+    padding-right: 20px;
     font-weight: 800;
 }
 
+/* Media Queries for mobile view */
+@media (max-width: 768px) {
+    .content {
+        display: block;
+    }
 
+    .box {
+        width: 90%;
+        margin: 20px auto;
+    }
 
+    .box img {
+        max-width: 100%;
+        margin-right: 0;
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+    }
 
+    h2 {
+        padding-left: 20px;
+        font-size: 200%;
+    }
+}
